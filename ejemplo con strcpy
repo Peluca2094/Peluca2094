@@ -1,0 +1,34 @@
+class Persona
+{
+protected:
+    char ndoc[20];
+    char nombre[20];
+    char apellido[20];
+    int dia, mes, anio;
+    char domicilio[50];
+    char telefono[20];
+    char email[20];
+
+
+public:
+    void Cargar();
+    void Mostrar();
+    const char *getNdoc() { return ndoc; }
+    const char *getNombre() { return nombre; }
+    const char *getApellido() { return apellido; }
+    int getDia() { return dia; }
+    int getMes() { return mes; }
+    int getAnio() { return anio; }
+    const char *getDomicilio() { return domicilio; }
+    const char *getTelefono() { return telefono; }
+    const char *getEmail() { return email; }
+    void setNdoc(char *n) { strcpy(ndoc, n); }
+    void setNombre(char *n) { strcpy(nombre, n); }
+    void setApellido(char *a) { strcpy(apellido, a); }
+    void setDia(int d) { dia = d; }
+    void setMes(int m) { mes = m; }
+    void setAnio(int a) { anio = a; }
+    void setDomicilio(char *d) { strcpy(domicilio, d); }
+    void setTelefono(char *tel) { strcpy(telefono, tel); }
+    void setEmail(char *e) { strcpy(email, e); }
+};
