@@ -1,0 +1,58 @@
+#include <iostream>
+#include <cstring>
+#include "casa_quinta.h"
+#include "casa.h"
+
+
+
+
+casa_quinta::casa_quinta(int codigo,const char *calle,const char *numero,const char *localidades,int antiguedad,float superficie_total,float superficie_cubierta,int habitaciones,bool pileta,bool quincho)
+:casa(codigo,calle,numero,localidades,antiguedad,superficie_total,superficie_cubierta,habitaciones){
+
+ _pileta=pileta;
+ _quincho=quincho;
+
+
+
+}
+
+ bool casa_quinta::get_pileta(){
+
+  return _pileta;
+
+ }
+
+bool casa_quinta::get_quincho(){
+
+  return _quincho;
+
+}
+
+
+string casa_quinta::mostrar_informacion()
+{
+
+     return "codigo:" +to_string(_codigo) + " calle: " + _calle +
+           " numero: " + _numero +
+           " localidad: " + _localidades +
+
+
+" antiguedad: " + to_string(_antiguedad) +
+
+
+" superficie total: " + to_string(_superficie_total) +
+
+
+" superficie cubierta: " + to_string(_superficie_cubierta) +
+
+
+" habitaciones: " + to_string(_habitaciones)+
+
+"tiene pileta?" + to_string(_pileta)+
+
+"tiene quincho?"+  to_string(_quincho);
+
+
+
+
+}
