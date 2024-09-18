@@ -1,0 +1,23 @@
+
+#pragma once
+
+#include <cstring>
+#include "casa.h"
+using namespace std;
+
+class casa_quinta: public casa {
+
+private:
+
+    bool _pileta;
+    bool _quincho;
+
+ public:
+
+   casa_quinta(int codigo,const char *calle,const char *numero,const char *localidades,int antiguedad,float superficie_total,float superficie_cubierta,int habitaciones,bool,bool);
+   bool get_pileta();
+   bool get_quincho();
+
+   string mostrar_informacion();
+
+};
